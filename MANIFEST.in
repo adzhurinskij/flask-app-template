@@ -1,0 +1,7 @@
+recursive-exclude * *.pyc
+
+include requirements.txt
+include config.example.cfg
+include README.md
+
+graft data
