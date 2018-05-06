@@ -57,7 +57,7 @@ def main():
     try:
         with app.app_context():
             ws = WSGIServer((args.listen, args.port), app, spawn=pool, 
-                log=access_log, error_log=app.logger, 
+                log=access_log, error_log=None, 
                 handler_class=CustomWSGIHandler)
             ws.serve_forever()
     except KeyboardInterrupt:
